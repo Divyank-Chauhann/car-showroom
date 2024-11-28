@@ -48,18 +48,18 @@ const cars = [
         price: "$2,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$1,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$3,58,743"
     },
     {
         name: "Mercedes-AMG",
@@ -69,18 +69,18 @@ const cars = [
         price: "$2,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$1,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$3,58,743"
     },
     {
         name: "Mercedes-AMG",
@@ -90,25 +90,25 @@ const cars = [
         price: "$2,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$1,58,743"
     },
     {
-        name: "Mercedes-AMG",
+        name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "$3,58,743"
     },
 ];
 
 const carContainer = document.getElementById('car-container');
 
-let displayedCars = 3; // Start with 3 cars
-let currentLevel = 1; // Track the current level
+let displayedCars = 3;
+let currentLevel = 1; 
 
 function createCarCard(car) {
     const carCard = document.createElement('div');
@@ -136,7 +136,7 @@ function createCarCard(car) {
 }
 
 function displayCars() {
-    carContainer.innerHTML = ''; // Clear existing cards
+    carContainer.innerHTML = '';
     for (let i = 0; i < Math.min(displayedCars, cars.length); i++) {
         carContainer.appendChild(createCarCard(cars[i]));
     }
@@ -153,7 +153,7 @@ document.getElementById('show-more').addEventListener('click', () => {
 document.getElementById('show-less').addEventListener('click', () => {
     if (currentLevel > 1) {
         currentLevel--;
-        displayedCars = Math.max(displayedCars - 3, 3); // At least 3 cars shown
+        displayedCars = Math.max(displayedCars - 3, 3); 
         displayCars();
         updateButtons();
         scrollToCarSection();
@@ -167,11 +167,38 @@ function updateButtons() {
 
 function scrollToCarSection() {
     const arrivalSection = document.querySelector('.arrival');
-    arrivalSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+    arrivalSection.scrollIntoView({ behavior: 'smooth' }); 
 }
 
-// Initial display of cars
 displayCars();
+
+// Blur effect
+const modal = document.getElementById('modal');
+const overlay = document.getElementById('overlay');
+const arrivalSection = document.querySelector('.arrival');
+
+carContainer.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON' && e.target.textContent === 'Details') {
+        const carCard = e.target.closest('.arr-col');
+        const carDetails = carCard.innerHTML;
+
+        modal.innerHTML = carDetails;
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+
+        arrivalSection.classList.add('blur');
+    }
+});
+
+overlay.addEventListener('click', () => {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+    arrivalSection.classList.remove('blur');
+});
+
+
+
+
 
 
 
