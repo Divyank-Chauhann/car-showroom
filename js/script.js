@@ -45,65 +45,66 @@ const cars = [
         image: "images/arrival/arrival-1.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "1.2 cr"
     },
     {
         name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
-        features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$1,58,743"
+        features: ["Automatic", "12.65 Km", "Model 2024", "Hybrid"],
+        price: "2.60 cr"
     },
     {
         name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$3,58,743"
+        price: "97.93 L"
     },
     {
         name: "Mercedes-AMG",
         image: "images/arrival/arrival-1.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "1.2 cr"
     },
     {
         name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
-        features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$1,58,743"
+        features: ["Automatic", "12.65 Km", "Model 2024", "Hybrid"],
+        price: "2.60 cr"
     },
     {
         name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$3,58,743"
+        price: "97.93 L"
     },
     {
         name: "Mercedes-AMG",
         image: "images/arrival/arrival-1.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$2,58,743"
+        price: "1.2cr"
     },
     {
         name: "BMW",
         image: "images/arrival/arrival-2.jpg",
         rating: "5.0 (5.8k Review)",
-        features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$1,58,743"
+        features: ["Automatic", "12.65 Km", "Model 2024", "Hybrid"],
+        price: "2.60cr"
     },
     {
         name: "Jaguar",
         image: "images/arrival/arrival-3.jpg",
         rating: "5.0 (5.8k Review)",
         features: ["Automatic", "12.65 Km", "Model 2023", "Hybrid"],
-        price: "$3,58,743"
+        price: "97.93 L"
     },
 ];
+
 
 const carContainer = document.getElementById('car-container');
 
